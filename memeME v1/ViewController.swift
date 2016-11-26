@@ -75,8 +75,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //setting properties for textfields
     func setTextField(_ textField: UITextField, text: String){
         textField.text=text
-        textField.textAlignment=NSTextAlignment.center
         textField.defaultTextAttributes=memeTextAttributes
+        textField.textAlignment=NSTextAlignment.center
         textField.delegate=textFieldDelegate
     }
     
@@ -91,13 +91,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //move up the frame inorder of keyboard to display
     func keyboardWillShow(_ notification:Notification) {
-        
+        if bottomTextField.isFirstResponder{
         view.frame.origin.y = -getKeyboardHeight(notification)
+      }
     }
     
     //hide the keyboard and re-position the frame
     func keyboardWillHide(_ notification:Notification){
+        if bottomTextField.isFirstResponder{
         view.frame.origin.y = 0
+      }
     }
 
     //calculate the keyboard height
