@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+struct MemeObject {
+    let topText:String
+    let bottomText:String
+    let image:UIImage
+    let memedImage:UIImage
+}
