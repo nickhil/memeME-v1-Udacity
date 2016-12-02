@@ -146,6 +146,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return meme
     }
     
+    
  //to share the meme
     @IBAction func shareMeme(_ sender: AnyObject) {
             let activityController = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
@@ -157,8 +158,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             present(activityController, animated: true, completion: nil)
-
-        
     }
         
    
@@ -168,25 +167,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cancelButton.isEnabled = false
         viewDidLoad()
 
+       }
     }
-    
-    
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
