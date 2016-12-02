@@ -11,22 +11,22 @@ import UIKit
 
 class SentMemesTableViewController : UITableViewController{
 
-   
-    var memes : [MemeObject]!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-    }
-
+    var memes : [MemeObject] {
+        return (UIApplication.shared.delegate as! AppDelegate).memes
+    } //access shared model "memes"
+    
+    //give the count of the total rows in table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
+    //reload the table view
     override func viewDidAppear(_ animated: Bool) {
-         self.tableView.reloadData()
+       super.viewDidAppear(animated)
+        self.tableView.reloadData()
     }
-
     
+    //return cell at the specified index path
+    //dequeue and reuse the cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableRow")!
         cell.imageView?.image = memes[indexPath.row].memedImage
@@ -34,12 +34,12 @@ class SentMemesTableViewController : UITableViewController{
         return cell
     }
    
-    
+    //task to be performed when the row gets selected
  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
  let detailController = self.storyboard?.instantiateViewController(withIdentifier: "ShowMeme") as! ShowMeme
-   //Load ImageView with Meme later
- 
- self.navigationController!.pushViewController(detailController, animated: true)
+    detailController.meme = memes[indexPath.row].memedImage
+    //push view Controller with the enlarged meme, over the navigation stack
+    self.navigationController!.pushViewController(detailController, animated: true)
  
  }
 

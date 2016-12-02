@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-1102" y="-311"/>
         </scene>
-        <!--Table-->
+        <!--Navigation Controller-->
         <scene sceneID="hU9-lZ-BIQ">
             <objects>
                 <navigationController id="wRr-2h-9T9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="ZIq-7x-NBn"/>
+                    <tabBarItem key="tabBarItem" title="" image="table" id="ZIq-7x-NBn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aN6-eh-JMc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dnb-mD-sir" id="APS-hJ-ive">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="-625.63718140929541"/>
         </scene>
-        <!--Collection-->
+        <!--Navigation Controller-->
         <scene sceneID="UFH-Xz-X2u">
             <objects>
                 <navigationController id="P7v-f4-UHb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="qGb-nM-73S"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection" id="qGb-nM-73S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QYy-sn-Uws">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -103,21 +103,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IuG-Ih-NlF">
-                            <size key="itemSize" width="153" height="150"/>
+                            <size key="itemSize" width="158" height="157"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SentMemesCollectionCell" id="2KP-aT-dRh" customClass="SentMemesCollectionCell" customModule="memeME_v1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="153" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="153" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="157"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBZ-uW-RS7">
-                                            <frame key="frameInset" minX="19" minY="20" width="114" height="111"/>
+                                            <frame key="frameInset" minX="8" minY="8" width="130" height="129"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -139,10 +139,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="IuG-Ih-NlF" id="YYm-eB-fkx"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gg1-cP-0Rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447.19999999999999" y="197.45127436281859"/>
+            <point key="canvasLocation" x="440.80000000000001" y="177.66116941529236"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -168,7 +171,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="rzN-xX-LB8"/>
-                                    <barButtonItem enabled="NO" systemItem="cancel" id="w6n-M0-beb">
+                                    <barButtonItem systemItem="cancel" id="w6n-M0-beb">
                                         <connections>
                                             <action selector="cancel:" destination="BYZ-38-t0r" id="OFX-FC-ESq"/>
                                         </connections>
@@ -220,12 +223,12 @@
                             <constraint firstItem="OM4-Or-vPc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="Kno-7Q-s6k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OM4-Or-vPc" secondAttribute="trailing" constant="110" id="LF5-Xp-Scb"/>
                             <constraint firstItem="4YK-Ru-bZm" firstAttribute="top" secondItem="OM4-Or-vPc" secondAttribute="bottom" constant="19" id="LpX-rR-PJS"/>
-                            <constraint firstItem="aun-KE-JbA" firstAttribute="leading" secondItem="4YK-Ru-bZm" secondAttribute="leading" constant="4" id="Ook-hh-iR7"/>
+                            <constraint firstItem="aun-KE-JbA" firstAttribute="leading" secondItem="4YK-Ru-bZm" secondAttribute="leading" id="Ook-hh-iR7"/>
                             <constraint firstAttribute="trailing" secondItem="es0-YL-ezq" secondAttribute="trailing" id="WDh-xK-9Vg"/>
                             <constraint firstItem="8jI-Ih-9Gz" firstAttribute="trailing" secondItem="OM4-Or-vPc" secondAttribute="trailing" id="Ylb-1P-DnN"/>
                             <constraint firstItem="es0-YL-ezq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="duY-W0-vjE"/>
-                            <constraint firstItem="aun-KE-JbA" firstAttribute="top" secondItem="8jI-Ih-9Gz" secondAttribute="bottom" constant="-51" id="ma8-Z2-ciy"/>
-                            <constraint firstItem="es0-YL-ezq" firstAttribute="leading" secondItem="aun-KE-JbA" secondAttribute="leading" constant="-4" id="tcj-zZ-M63"/>
+                            <constraint firstItem="aun-KE-JbA" firstAttribute="top" secondItem="8jI-Ih-9Gz" secondAttribute="bottom" constant="-56" id="ma8-Z2-ciy"/>
+                            <constraint firstItem="es0-YL-ezq" firstAttribute="leading" secondItem="aun-KE-JbA" secondAttribute="leading" id="tcj-zZ-M63"/>
                             <constraint firstItem="8jI-Ih-9Gz" firstAttribute="top" secondItem="es0-YL-ezq" secondAttribute="bottom" constant="12" id="y2u-3O-agv"/>
                         </constraints>
                     </view>
@@ -242,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="-91"/>
+            <point key="canvasLocation" x="1256.8" y="-91.304347826086968"/>
         </scene>
         <!--Show Meme-->
         <scene sceneID="RT0-ay-d5V">
@@ -255,15 +258,31 @@
                     <view key="view" contentMode="scaleToFill" id="EIR-mf-N1J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VtA-0R-qTa" userLabel="meme"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VtA-0R-qTa" firstAttribute="top" secondItem="hSv-3V-019" secondAttribute="bottom" constant="8" symbolic="YES" id="Cr4-nm-3bF"/>
+                            <constraint firstAttribute="trailing" secondItem="VtA-0R-qTa" secondAttribute="trailing" constant="20" symbolic="YES" id="Wru-uC-uLn"/>
+                            <constraint firstItem="VtA-0R-qTa" firstAttribute="leading" secondItem="EIR-mf-N1J" secondAttribute="leading" constant="20" symbolic="YES" id="bso-Iq-ZFX"/>
+                            <constraint firstItem="mHq-DI-0CQ" firstAttribute="top" secondItem="VtA-0R-qTa" secondAttribute="bottom" constant="8" symbolic="YES" id="znp-Mz-X7O"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="memeDetail" destination="VtA-0R-qTa" id="anr-ox-tkp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVv-Fw-qzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-267"/>
+            <point key="canvasLocation" x="2015.2" y="-267.61619190404798"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection" width="30" height="30"/>
+        <image name="table" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VHS-iO-oa6"/>
+        <segue reference="gI0-Wa-qPX"/>
     </inferredMetricsTieBreakers>
 </document>

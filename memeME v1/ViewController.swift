@@ -67,7 +67,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             ImagePickerView.image = image
             self.dismiss(animated: true, completion: nil)        }
-        cancelButton.isEnabled=true
+   //     cancelButton.isEnabled=true
         shareButton.isEnabled=true
         
     }
@@ -162,10 +162,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
    
     @IBAction func cancel(_ sender: AnyObject) {
-        ImagePickerView.image = nil
-        shareButton.isEnabled = false
-        cancelButton.isEnabled = false
-        viewDidLoad()
+        self.dismiss(animated: true, completion: nil)
 
        }
     }

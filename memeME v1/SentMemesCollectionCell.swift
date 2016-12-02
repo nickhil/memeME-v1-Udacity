@@ -10,8 +10,5 @@ import Foundation
 import UIKit
 
 class SentMemesCollectionCell : UICollectionViewCell  {
-
     @IBOutlet weak var memeImage: UIImageView!
-  
-    
 }
