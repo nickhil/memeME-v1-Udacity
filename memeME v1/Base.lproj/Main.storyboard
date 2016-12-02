@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-1102" y="-311"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Table-->
         <scene sceneID="hU9-lZ-BIQ">
             <objects>
                 <navigationController id="wRr-2h-9T9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="ZIq-7x-NBn"/>
+                    <tabBarItem key="tabBarItem" title="Table" id="ZIq-7x-NBn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aN6-eh-JMc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="464.80000000000001" y="-625.63718140929541"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="UFH-Xz-X2u">
             <objects>
                 <navigationController id="P7v-f4-UHb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qGb-nM-73S"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="qGb-nM-73S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QYy-sn-Uws">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -264,6 +264,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gI0-Wa-qPX"/>
+        <segue reference="VHS-iO-oa6"/>
     </inferredMetricsTieBreakers>
 </document>

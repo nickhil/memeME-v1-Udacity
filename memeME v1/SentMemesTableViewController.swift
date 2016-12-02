@@ -22,6 +22,10 @@ class SentMemesTableViewController : UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
+    override func viewDidAppear(_ animated: Bool) {
+         self.tableView.reloadData()
+    }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableRow")!
